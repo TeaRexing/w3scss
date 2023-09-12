@@ -1,0 +1,57 @@
+/* Default variables */
+$prefix: "w3" !default;
+$base-spacing: 8px !default;
+
+/* Buttons */
+.#{$prefix}-btn, .#{$prefix}-button {
+  border: none;
+  display: inline-block;
+  padding: $base-spacing calc(2 * $base-spacing);
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+  }
+}
+
+.#{$prefix}-btn {
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  &.#{$prefix}-disabled {
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  &:disabled {
+    &:hover {
+      box-shadow:none;
+    }
+  }
+}
+
+.#{$prefix}-button {
+  &:hover {
+    color: #000 !important;
+    background-color: #ccc !important;
+  }
+}
+
+.#{$prefix}-circle {
+  border-radius: 50%;
+}
+
+.#{$prefix}-ripple {
+  transition: opacity 0s;
+  &:active {
+    opacity: 0.5;
+  }
+}

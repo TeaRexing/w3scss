@@ -1,0 +1,23 @@
+/* Default variables */
+$prefix: "w3" !default;
+$base-spacing: 8px !default;
+
+/* Round */
+.#{$prefix}-round {
+  border-radius: calc($base-spacing / 2);
+  &-small {
+    border-radius: calc($base-spacing / 4);
+  }
+  &-medium {
+    border-radius: calc($base-spacing / 2);
+  }
+  &-large {
+    border-radius: $base-spacing;
+  }
+  &-xlarge {
+    border-radius: calc($base-spacing * 2);
+  }
+  &-xxlarge {
+    border-radius: calc($base-spacing * 4);
+  }
+}

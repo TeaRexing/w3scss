@@ -1,0 +1,23 @@
+{
+  "name": "w3scss",
+  "version": "0.0.1",
+  "description": "Rewrite of w3.css in sass with some extensions",
+  "scripts": {
+    "css:scss": "sass --no-source-map src/main.scss ./main.css",
+    "css:lint": "stylelint src/*.scss --custom-syntax postcss-scss",
+    "css:autoprefixer": "postcss -u autoprefixer -r main.css",
+    "css:minify": "postcss -u cssnano -r main.css",
+    "build": "npm run css:lint && npm run css:scss",
+    "production": "npm run build && npm run css:autoprefixer && npm run css:minify"
+  },
+  "author": "Patrick Zempel",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^5.1.15",
+    "postcss-cli": "^10.1.0",
+    "postcss-scss": "^4.0.6",
+    "sass": "^1.58.3",
+    "stylelint": "^15.2.0"
+  }
+}

@@ -1,0 +1,163 @@
+/* Variables */
+$prefix: "w3" !default;
+$base-spacing: 8px !default;
+$base-font: Verdana !default;
+$heading-font: Segoe UI !default;
+$code-font: Consolas !default;
+$content-width: 980px !default;
+$auto-width: 1140px !default;
+$color-palette: (
+  #f15a24, // always the branding color
+  #4d4d4d, // always contrast to the branding color
+  #000, 
+  #000, 
+  #000, 
+  #000,
+) !default;
+
+/* Breakpoints */
+// mobile: smaller equal 600px
+$mobile: 600px;
+// phablet: between 601px and 768px
+$phablet: 768px;
+// tablet: between 601px/768px and 992px
+$tablet: 992px;
+// desktop: larger than 1205px
+$desktop: 1205px;
+
+/* Modules (https://www.w3schools.com/w3css/w3css_references.asp) */
+// Base
+@use 'base' with (
+  $base-font: $base-font,
+  $base-font-size: 15px,
+  $base-line-height: 1.5,
+  $heading-font: $heading-font,
+  $code-font: $code-font,
+  $border-color: #eee,
+);
+
+// Container
+@use 'container' with (
+  $prefix: $prefix,
+  $base-spacing: $base-spacing,
+  $code-font: $code-font,
+  $content-width: $content-width,
+  $auto-width: $auto-width,
+  $tablet: $tablet,
+  $desktop: $desktop,
+);
+
+// Table
+@use 'table' with (
+  $prefix: $prefix,
+  $base-spacing: $base-spacing,
+  $border-color: #ccc,
+  $stripe-dark: #f1f1f1,
+  $stripe-light: #ffffff,
+);
+
+// Cards
+@use 'card' with (
+  $prefix: $prefix,
+);
+
+// Responsive
+@use 'responsive' with (
+  $prefix: $prefix,
+  $base-spacing: $base-spacing,
+  $mobile: $mobile,
+  $tablet: $tablet,
+);
+
+// Layout
+@use 'layout' with (
+  $prefix: $prefix,
+);
+
+// Navigation
+@use 'navigation' with (
+  $prefix: $prefix,
+  $base-spacing: $base-spacing,
+  $tablet: $tablet,
+);
+
+// Button
+@use 'button' with (
+  $prefix: $prefix,
+  $base-spacing: $base-spacing,
+);
+
+// Input
+@use 'input' with (
+  $prefix: $prefix,
+  $base-spacing: $base-spacing,
+);
+
+// Modal
+@use 'modal' with (
+  $prefix: $prefix,
+  $mobile: $mobile,
+  $phablet: $phablet,
+  $tablet: $tablet,
+);
+
+// Animation
+@use 'animation' with (
+  $prefix: $prefix,
+);
+
+// Typography
+@use 'typography' with (
+  $prefix: $prefix,
+  $base-spacing: $base-spacing,
+  $base-font-size: 15px,
+  $mobile: $mobile,
+  $phablet: $phablet,
+  $tablet: $tablet,
+  $desktop: $desktop,
+);
+
+// Display
+@use 'display' with (
+  $prefix: $prefix,
+);
+
+// Effect 
+@use 'effect' with (
+  $prefix: $prefix,
+);
+
+// Colors
+@use 'color' with (
+  $prefix: $prefix,
+  $color-palette: $color-palette,
+);
+
+// Round
+@use 'round' with (
+  $prefix: $prefix,
+  $base-spacing: $base-spacing,
+);
+
+// Padding
+@use 'padding' with (
+  $prefix: $prefix,
+  $base-spacing: $base-spacing,
+);
+
+// Margin 
+@use 'margin' with (
+  $prefix: $prefix,
+  $base-spacing: $base-spacing,
+);
+
+// Border
+@use 'border' with (
+  $prefix: $prefix,
+  $border-color: #cccccc,
+);
+
+// Misc
+@use 'misc' with (
+  $prefix: $prefix,
+);

@@ -1,0 +1,30 @@
+/* Default variables */
+$prefix: "w3" !default;
+
+/* Layout */
+.#{$prefix}-cell {
+  &-row {
+    display: table;
+    width: 100%;
+    &:before {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  display: table-cell;
+  &-top {
+    vertical-align: top;
+  }
+  &-middle {
+    vertical-align: middle;
+  }
+  &-bottom {
+    vertical-align: bottom;
+  }
+}

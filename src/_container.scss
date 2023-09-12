@@ -1,0 +1,135 @@
+/* Default variables */
+$prefix: "w3" !default;
+$base-spacing: 8px !default;
+$code-font: Consolas !default;
+$content-width: 980px !default;
+$auto-width: 1140px !default;
+$tablet: 992px !default;
+$desktop: 1205px !default;
+
+.#{$prefix}-container {
+  padding: 0.01em calc(2 * $base-spacing);
+  &:before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.#{$prefix}-panel {
+  padding: 0.01em calc(2 * $base-spacing);
+  margin-top: calc(2 * $base-spacing);
+  margin-bottom: calc(2 * $base-spacing);
+  &:before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.#{$prefix}-badge {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  padding-left: $base-spacing;
+  padding-right: $base-spacing;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.#{$prefix}-tag {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  padding-left: $base-spacing;
+  padding-right: $base-spacing;
+  text-align: center
+}
+
+.#{$prefix}-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    padding: $base-spacing calc(2 * $base-spacing);
+    border-bottom: 1px solid #ddd;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &.w3-hoverable {
+    li:hover {
+      background-color: #ccc;
+    }
+  }
+}
+
+.#{$prefix}-display-container {
+  position: relative;
+  &:hover {
+    display: block;
+    span.w3-display-hover {
+      display: inline-block;
+    }
+  }
+}
+
+.#{$prefix}-block {
+  display: block;
+  width: 100%;
+}
+
+.#{$prefix}-code {
+  margin-top: calc(2 * $base-spacing) !important;
+  margin-bottom: calc(2 * $base-spacing) !important;
+  font-family: $code-font, monospace;
+  font-size: 16px;
+  width: auto;
+  background-color: #fff;
+  padding: $base-spacing calc(1.5 * $base-spacing);
+  border-left: 4px solid #4CAF50;
+  word-wrap: break-word;
+}
+
+.#{$prefix}-codespan {
+  font-family: $code-font, monospace;
+  font-size: 16px;
+  color: crimson;
+  background-color: #f1f1f1;
+  padding-left: calc(0.5 * $base-spacing);
+  padding-right: calc(0.5 * $base-spacing);
+  font-size: 110%;
+}
+
+.#{$prefix}-content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $content-width;
+}
+
+.#{$prefix}-auto {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $auto-width;
+  @media (max-width: $tablet) {
+    max-width: 100%;
+  }
+  @media (max-width: $desktop) {
+    max-width: 95%;
+  }
+}
+
+.#{$prefix}-stretch {
+  margin-left: calc(-2 * $base-spacing);
+  margin-right: calc(-2 * $base-spacing);
+}

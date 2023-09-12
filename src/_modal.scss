@@ -1,0 +1,54 @@
+/* Default variables */
+$prefix: "w3" !default;
+$mobile: 600px !default;
+$phablet: 768px !default;
+$tablet: 992px !default;
+
+/* Modal */
+.#{$prefix}-modal {
+  z-index: 3;
+  display: none;
+  padding-top: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  @media (max-width: $mobile) {
+    padding-top: 30px;
+  }
+  @media (max-width: $phablet) {
+    padding-top: 50px;
+  }
+  &-content {
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: $mobile;
+    @media (max-width: $mobile) {
+      margin: 0 10px;
+      width: auto !important;
+    }
+    @media (max-width: $phablet) {
+      width: 500px
+    }
+    @media (min-width: calc($tablet + 1px)) {
+      width: 900px;
+    }
+  }
+}
+
+.#{$prefix}-tooltip {
+  position: relative;
+  &:hover .#{$prefix}-text {
+    display: inline-block;
+  }
+  & .#{$prefix}-text {
+    display: none;
+  }
+}

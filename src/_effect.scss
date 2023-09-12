@@ -1,0 +1,97 @@
+/* Default variables */
+$prefix: "w3" !default;
+
+/* Effect */
+.#{$prefix}-opacity {
+  opacity: 0.6;
+  &:hover {
+    opacity: 0.6;
+  }
+  &-off {
+    opacity: 1;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &-max {
+    opacity: 0.25;
+  }
+  &-min {
+    opacity: 0.75;
+  }
+}
+
+.#{$prefix}-greyscale, .#{$prefix}-grayscale {
+  filter: grayscale(75%);
+  &:hover {
+    filter: grayscale(100%);
+  }
+  &-min {
+    filter: grayscale(50%);
+  }
+  &-max {
+    filter: grayscale(100%);
+  }
+}
+
+.#{$prefix}-sepia {
+  filter: sepia(75%);
+  &-min {
+    filter: sepia(50%);
+  }
+  &-max {
+    filter: sepia(100%);
+  }
+}
+
+.#{$prefix}-hover {
+  &-greyscale, &-grayscale {
+    &:hover {
+      filter: grayscale(100%);
+    }
+    &-min {
+      &:hover {
+        filter: grayscale(50%);
+      }
+    }
+    &-none {
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+  &-sepia {
+    &:hover {
+      filter: sepia(100%);
+    }
+  }
+  &-shadow {
+    &:hover {
+	    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+    }
+  }
+  &-opacity {
+    &-off:hover {
+      opacity: 1;
+    }
+  }
+  &-none {
+    &:hover {
+      background-color: transparent !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+.#{$prefix}-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}

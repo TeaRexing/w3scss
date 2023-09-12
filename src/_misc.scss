@@ -1,0 +1,32 @@
+/* Default variables */
+$prefix: "w3" !default;
+
+/* Misc */
+
+.#{$prefix}-disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+  & * {
+    pointer-events: none;
+  }
+  &:disabled * {
+    pointer-events: none;
+  }
+}
+
+:disabled * {
+  pointer-events: none;
+}
+
+.#{$prefix}-clear {
+  &:before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

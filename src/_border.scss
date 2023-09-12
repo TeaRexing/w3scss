@@ -1,0 +1,23 @@
+/* Default variables */
+$prefix: "w3" !default;
+$border-color: #ccc !default;
+
+$sides: (top, left, right, bottom);
+
+/* Border */
+.#{$prefix}-border {
+  &-0 {
+    border: 0 !important;
+  }
+  @each $side in $sides {
+    &-#{$side} {
+      border-#{$side}: 1px solid $border-color !important;
+    }
+  }
+}
+
+@each $side in $sides {
+  .#{$prefix}-#{$side}bar {
+    border-#{$side}: 6px solid $border-color !important;
+  }
+}

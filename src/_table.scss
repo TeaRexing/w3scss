@@ -1,0 +1,108 @@
+/* Default variables */
+$prefix: "w3" !default;
+$base-spacing: 8px !default;
+$border-color: #ccc !default;
+$stripe-dark: #f1f1f1 !default;
+$stripe-light: #fff !default;
+
+/* Table */
+.#{$prefix}-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  td {
+    padding: $base-spacing $base-spacing;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+    &:first-child {
+      padding-left: calc(2 * $base-spacing);
+    }
+  }
+  th {
+    padding: $base-spacing $base-spacing;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+    &:first-child {
+      padding-left: calc(2 * $base-spacing);
+    }
+  }
+  &-all {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid $border-color;
+    width: 100%;
+    display: table;
+    td {
+      padding: $base-spacing $base-spacing;
+      display: table-cell;
+      text-align: left;
+      vertical-align: top;
+      &:first-child {
+        padding-left: calc(2 * $base-spacing);
+      }
+    }
+    th {
+      padding: $base-spacing $base-spacing;
+      display: table-cell;
+      text-align: left;
+      vertical-align: top;
+      &:first-child {
+        padding-left: calc(2 * $base-spacing);
+      }
+    }
+    tr {
+      border-bottom: 1px solid #ddd;
+    }
+    tr:nth-child(odd) {
+      background-color: $stripe-light;
+    }
+    tr:nth-child(even) {
+      background-color: $stripe-dark;
+    }
+  }
+}
+
+.#{$prefix}-striped {
+  tbody tr:nth-child(even) {
+    background-color: $stripe-dark;
+  }
+}
+
+.#{$prefix}-border {
+  border: 1px solid $border-color !important;
+}
+
+.#{$prefix}-bordered {
+  tr {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.#{$prefix}-centered {
+  tr th {
+    text-align: center;
+  }
+  tr td {
+    text-align: center;
+  }
+}
+
+.#{$prefix}-hoverable {
+  tbody tr:hover {
+    background-color: $border-color;
+  }
+}
+
+.#{$prefix}-ul.#{$prefix}-hoverable {
+  li:hover {
+    background-color: $border-color;
+  }
+}
+
+.#{$prefix}-responsive {
+  display: block;
+  overflow-x: auto;
+}

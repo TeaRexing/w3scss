@@ -1,0 +1,6 @@
+"rules": {
+    "block-no-empty": null,
+    "no-irregular-whitespace": true,
+    "color-no-invalid-hex": true,
+    "color-hex-length": "short"
+}

@@ -1,0 +1,122 @@
+/* Default variables */
+$prefix: "w3" !default;
+
+/* Display */
+.#{$prefix}-center {
+  text-align: center !important;
+}
+
+.#{$prefix}-left {
+  float: left !important;
+}
+
+.#{$prefix}-right {
+  float: right !important;
+}
+
+.#{$prefix}-left-align {
+  text-align: left !important;
+}
+
+.#{$prefix}-right-align {
+  text-align: right !important;
+}
+
+.#{$prefix}-justify {
+  text-align: justify !important;
+}
+
+.#{$prefix}-hide {
+  display: none !important;
+}
+
+.#{$prefix}-show {
+  display: block !important;
+  &-block {
+    display: block !important;
+  }
+  &-inline-block {
+    display: inline-block !important;
+  }
+}
+
+$direction: (top, bottom);
+@each $dir in $direction {
+  .#{$prefix}-#{$dir} {
+    #{$dir}: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    &-sticky {
+      position: sticky !important;
+    }
+  }
+}
+
+.#{$prefix}-display {
+  &-topleft {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &-topright {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &-bottomleft {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  &-bottomright {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &-left {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+  }
+  &-right {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+  }
+  &-topmiddle {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0%);
+  }
+  &-bottommiddle {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0%);
+  }
+  &-position {
+    position: absolute;
+  }
+  &-hover {
+    display: block;
+  }
+}
+/* what ??
+.w3-display-hover {
+  display: block
+}
+
+.w3-display-hover {
+  display: none
+}
+*/

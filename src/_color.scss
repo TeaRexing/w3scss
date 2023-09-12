@@ -1,0 +1,128 @@
+@use "sass:color";
+@use "sass:list";
+
+/* Default variables */
+$prefix: "w3" !default;
+$color-palette: (
+  #f15a24, // always the branding color
+  #4d4d4d, // always contrast to the branding color
+  #000, 
+  #000, 
+  #000, 
+  #000,
+) !default;
+
+/* Color */
+$colors: (
+  "red": #f44336,
+  "pink": #e91e63,
+  "purple": #9c27b0,
+  "deep-purple": #673ab7,
+  "inidigo": #3f51b5,
+  "blue": #2196f3,
+  "light-blue": #87ceeb,
+  "cyan": #00bcd4,
+  "aqua": #0ff,
+  "teal": #009688,
+  "green": #4caf50,
+  "light-green": #8bc34a,
+  "lime": #cddc39,
+  "sand": #fdf5e6,
+  "khaki": #f0e68c,
+  "yellow": #ffeb3b,
+  "amber": #ffc107,
+  "orange": #ff9800,
+  "deep-orange": #ff5722,
+  "blue-grey": #607d8b,
+  "blue-gray": #607d8b,
+  "brown": #795548,
+  "light-grey": #f1f1f1,
+  "light-gray": #f1f1f1,
+  "grey": #9e9e9e,
+  "gray": #9e9e9e,
+  "dark-grey": #616161,
+  "dark-gray": #616161,
+  "black": #000,
+  "white": #fff,
+  "pale-red": #fdd,
+  "pale-yellow": #ffc,
+  "pale-green": #dfd,
+  "pale-blue": #dff,
+  "transparent": transparent
+  );
+
+@each $color, $hex in $colors {
+  // Background + Hover-Background
+  .#{$prefix}-#{$color} {
+    background-color: $hex !important;
+    // color might not always match with values from w3.css
+    // to enforce the text color use the appropriate text-color class
+    @if color.lightness($hex) <= 50 {
+      color: #fff !important;
+    }
+    @else {
+      color: #000 !important;
+    }
+  }
+  .#{$prefix}-hover-#{$color} {
+    &:hover {
+      background-color: $hex !important;
+    }
+  }
+  // Text + Hover-Text
+  .#{$prefix}-text-#{$color} {
+    color: $hex !important;
+  }
+  .#{$prefix}-hover-text-#{$color} {
+    &:hover {
+      color: $hex !important;
+    }
+  }
+  // Border + Hover-Border
+  .#{$prefix}-border-#{$color} {
+    border-color: $hex !important;
+  }
+  .#{$prefix}-hover-border-#{$color} {
+    &:hover {
+      border-color: $hex !important;
+    }
+  }
+}
+
+@for $i from 1 through list.length($color-palette) {
+  // Background + Hover-Background
+  .#{$prefix}-#{$i} {
+    background-color: nth($color-palette,$i) !important;
+    // color might not always match with values from w3.css
+    // to enforce the text color use the appropriate text-color class
+    @if color.lightness(nth($color-palette, $i)) <= 50 {
+      color: #fff !important;
+    }
+    @else {
+      color: #000 !important;
+    }
+  }
+  .#{$prefix}-hover-#{$i} {
+    &:hover {
+      background-color: nth($color-palette, $i) !important;
+    }
+  }
+  // Text + Hover-Text
+  .#{$prefix}-text-#{$i} {
+    color: nth($color-palette, $i) !important;
+  }
+  .#{$prefix}-hover-text-#{$i} {
+    &:hover {
+      color: nth($color-palette, $i) !important;
+    }
+  }
+  // Border + Hover-Border
+  .#{$prefix}-border-#{$i} {
+    border-color: nth($color-palette, $i) !important;
+  }
+  .#{$prefix}-hover-border-#{$i} {
+    &:hover {
+      border-color: nth($color-palette, $i) !important;
+    }
+  }
+}

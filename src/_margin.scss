@@ -1,0 +1,36 @@
+@use "sass:math";
+
+/* Default variables */
+$prefix: "w3" !default;
+$base-spacing: 8px !default;
+
+/* Margin */
+.#{$prefix}-margin {
+  margin: calc($base-spacing * 2) !important;
+  $sides : (top, left, right, bottom);
+  @each $side in $sides {
+    &-#{$side} {
+      margin-#{$side}: calc($base-spacing * 2) !important;
+      @for $i from 1 through 20 {
+      $val : $i * $base-spacing;
+        &-#{math.div($val,($val * 0 + 1))} {
+          margin-#{$side}: calc($i * $base-spacing) !important;
+        }
+      } 
+    }
+  }
+  &-none {
+    margin: 0 !important;
+  }
+  @for $i from 1 through 20 {
+  $val : $i * $base-spacing;
+    &-#{math.div($val,($val * 0 + 1))} {
+      margin: calc($i * $base-spacing);
+    }
+  } 
+}
+
+.#{$prefix}-section {
+  margin-top: calc($base-spacing * 2) !important;
+  margin-bottom: calc($base-spacing * 2) !important;
+}

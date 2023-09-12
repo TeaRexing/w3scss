@@ -1,0 +1,96 @@
+/* Default variables */
+$prefix: "w3" !default;
+//
+// ANIMATIONS
+//
+// outline animation
+@mixin animate-outline($width, $factor, $speed, $color) {
+  outline: solid $width $color !important;
+  transition:  outline $speed linear;
+  &:hover {
+    outline-width: calc($factor * $width) !important;
+  }
+}
+
+//
+// FILTER
+//
+@mixin blur($px : 5px) {
+  filter: blur($px);
+}
+
+//
+// PARALLAX
+// 
+// parallax image
+@mixin parallax-image($name, $height, $image, $blur) {
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax-background-#{$name} {
+    min-height: $height;
+    background-image: url($image);
+    @include blur($blur);
+    @media only screen and (max-device-width: 1200px) {
+      background-attachment: scroll !important;
+      min-height: 400px;
+    }
+  }
+}
+
+// parallax solid color
+@mixin parallax-color($name, $height, $color) {
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax-background-#{$name} {
+    min-height: $height;
+    background-color: $color;
+    @media only screen and (max-device-width: 1200px) {
+      background-attachment: scroll !important;
+      min-height: 400px;
+    }
+  }
+}
+
+//
+// RESPONSIVE
+//
+// hide/show smaller than ...
+@mixin hide-smaller($width) {
+  .hide-smaller-#{$width} {
+    @media only screen and (max-device-width: #{$width}px) {
+      display: none;
+    }
+  }
+}
+
+@mixin show-smaller($width) {
+  .show-smaller-#{$width} {
+    @media only screen and (max-device-width: #{$width}px) {
+      display: block;
+    }
+  }
+}
+// hide/show larger than ...
+@mixin hide-larger($width) {
+  .hide-larger-#{$width} {
+    @media only screen and (min-device-width: #{$width}px) {
+      display: none;
+    }
+  }
+}
+
+@mixin show-larger($width) {
+  .show-larger-#{$width} {
+    @media only screen and (min-device-width: #{$width}px) {
+      display: block;
+    }
+  }
+}

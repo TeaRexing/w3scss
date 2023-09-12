@@ -1,0 +1,40 @@
+/* Default variables */
+$prefix: "w3" !default;
+$base-spacing: 8px !default;
+
+/* Input */
+.#{$prefix}-input {
+  padding: 8px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+
+.#{$prefix}-check {
+  width: calc(3 * $base-spacing);
+  height:calc(3 * $base-spacing); 
+  position: relative;
+  top: 6px;
+}
+
+.#{$prefix}-radio {
+  width: calc(3 * $base-spacing);
+  height:calc(3 * $base-spacing); 
+  position: relative;
+  top: 6px;
+}
+
+.#{$prefix}-select {
+  padding: 9px 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.#{$prefix}-animate-input {
+  transition: width 0.4s ease-in-out;
+  &:focus {
+    width: 100% !important;
+  }
+}

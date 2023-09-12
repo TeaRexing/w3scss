@@ -1,0 +1,48 @@
+/* Default variables */
+$prefix: "w3" !default;
+$base-spacing: 8px !default;
+
+/* Padding */
+.#{$prefix}-padding {
+  padding: $base-spacing calc($base-spacing * 2) !important;
+  &-small {
+    padding: calc($base-spacing / 2) $base-spacing !important;
+  }
+  &-large {
+    padding: calc($base-spacing * 1.6) calc($base-spacing * 3) !important;
+  }
+  &-16 {
+    padding-top: calc($base-spacing * 2) !important;
+    padding-bottom: calc($base-spacing * 2) !important;
+  }
+  &-24 {
+    padding-top: calc($base-spacing * 3) !important;
+    padding-bottom: calc($base-spacing * 3) !important;
+  }
+  &-32 {
+    padding-top: calc($base-spacing * 4) !important;
+    padding-bottom: calc($base-spacing * 4) !important;
+  }
+  &-48 {
+    padding-top: calc($base-spacing * 6) !important;
+    padding-bottom: calc($base-spacing * 6) !important;
+  }
+  &-64 {
+    padding-top: calc($base-spacing * 8) !important;
+    padding-bottom: calc($base-spacing * 8) !important;
+  }
+  &-top {
+    &-24 {
+      padding-top: calc($base-spacing * 3) !important;
+    }
+    &-32 {
+      padding-top: calc($base-spacing * 4) !important;
+    }
+    &-48 {
+      padding-top: calc($base-spacing * 6) !important;
+    }
+    &-64 {
+      padding-top: calc($base-spacing * 8) !important;
+    }
+  }
+} 
