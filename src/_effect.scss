@@ -8,9 +8,9 @@ $prefix: "w3" !default;
     opacity: 0.6;
   }
   &-off {
-    opacity: 1;
+    opacity: 1 !important;
     &:hover {
-      opacity: 1;
+      opacity: 1 !important;
     }
   }
   &-max {
