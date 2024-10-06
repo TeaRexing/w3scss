@@ -3,6 +3,7 @@ $prefix: "w3" !default;
 
 /* Layout */
 .#{$prefix}-cell {
+  display: table-cell;
   &-row {
     display: table;
     width: 100%;
@@ -17,7 +18,6 @@ $prefix: "w3" !default;
       clear: both;
     }
   }
-  display: table-cell;
   &-top {
     vertical-align: top;
   }
