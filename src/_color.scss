@@ -55,14 +55,6 @@ $colors: (
   // Background + Hover-Background
   .#{$prefix}-#{$color} {
     background-color: $hex !important;
-    // color might not always match with values from w3.css
-    // to enforce the text color use the appropriate text-color class
-    @if color.lightness($hex) <= 50 {
-      color: #fff !important;
-    }
-    @else {
-      color: #000 !important;
-    }
   }
   .#{$prefix}-hover-#{$color} {
     &:hover {
@@ -93,14 +85,6 @@ $colors: (
   // Background + Hover-Background
   .#{$prefix}-#{$i} {
     background-color: nth($color-palette,$i) !important;
-    // color might not always match with values from w3.css
-    // to enforce the text color use the appropriate text-color class
-    @if color.lightness(nth($color-palette, $i)) <= 50 {
-      color: #fff !important;
-    }
-    @else {
-      color: #000 !important;
-    }
   }
   .#{$prefix}-hover-#{$i} {
     &:hover {
