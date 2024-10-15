@@ -55,6 +55,13 @@ $colors: (
   // Background + Hover-Background
   .#{$prefix}-#{$color} {
     background-color: $hex !important;
+    @if color.same($hex, #000) {
+      color: #fff !important;
+    } @else {
+      color: #000 !important;
+    }
+
+    color: color.complement($hex) !important; 
   }
   .#{$prefix}-hover-#{$color} {
     &:hover {
@@ -85,6 +92,11 @@ $colors: (
   // Background + Hover-Background
   .#{$prefix}-#{$i} {
     background-color: nth($color-palette,$i) !important;
+    @if color.same(nth($color-palette, $i), #000) {
+      color: #fff !important;
+    } @else {
+      color: #000 !important;
+    }
   }
   .#{$prefix}-hover-#{$i} {
     &:hover {
