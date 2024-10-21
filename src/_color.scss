@@ -91,8 +91,8 @@ $colors: (
 @for $i from 1 through list.length($color-palette) {
   // Background + Hover-Background
   .#{$prefix}-#{$i} {
-    background-color: nth($color-palette,$i) !important;
-    @if color.same(nth($color-palette, $i), #000) {
+    background-color: list.nth($color-palette,$i) !important;
+    @if color.same(list.nth($color-palette, $i), #000) {
       color: #fff !important;
     } @else {
       color: #000 !important;
@@ -100,25 +100,25 @@ $colors: (
   }
   .#{$prefix}-hover-#{$i} {
     &:hover {
-      background-color: nth($color-palette, $i) !important;
+      background-color: list.nth($color-palette, $i) !important;
     }
   }
   // Text + Hover-Text
   .#{$prefix}-text-#{$i} {
-    color: nth($color-palette, $i) !important;
+    color: list.nth($color-palette, $i) !important;
   }
   .#{$prefix}-hover-text-#{$i} {
     &:hover {
-      color: nth($color-palette, $i) !important;
+      color: list.nth($color-palette, $i) !important;
     }
   }
   // Border + Hover-Border
   .#{$prefix}-border-#{$i} {
-    border-color: nth($color-palette, $i) !important;
+    border-color: list.nth($color-palette, $i) !important;
   }
   .#{$prefix}-hover-border-#{$i} {
     &:hover {
-      border-color: nth($color-palette, $i) !important;
+      border-color: list.nth($color-palette, $i) !important;
     }
   }
 }
