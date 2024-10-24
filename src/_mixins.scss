@@ -94,3 +94,24 @@ $prefix: "w3" !default;
     }
   }
 }
+
+@mixin breadcrumbs($symbol) {
+  ul.breadcrumbs {
+    padding: $base-spacing 0px;
+    list-style: none;
+    & li {
+      display: inline;
+      font-size: math.calc(2 * $base-spacing);
+      & a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    & li+li:before {
+      padding: $base-spacing;
+      content: $symbol;
+    }
+  }
+}
