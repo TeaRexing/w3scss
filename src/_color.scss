@@ -55,13 +55,6 @@ $colors: (
   // Background + Hover-Background
   .#{$prefix}-#{$color} {
     background-color: $hex !important;
-    @if color.same($hex, #000) {
-      color: #fff !important;
-    } @else {
-      color: #000 !important;
-    }
-
-    color: color.complement($hex) !important; 
   }
   .#{$prefix}-hover-#{$color} {
     &:hover {
