@@ -5,11 +5,19 @@ $base-spacing: 8px !default;
 /* Padding */
 .#{$prefix}-padding {
   padding: $base-spacing calc($base-spacing * 2) !important;
+  $sides : (top, left, right, bottom);
+  &-none {
+    padding: 0 !important;
+  }
   &-small {
     padding: calc($base-spacing / 2) $base-spacing !important;
   }
   &-large {
     padding: calc($base-spacing * 1.6) calc($base-spacing * 3) !important;
+  }
+  &-8 {
+    padding-top: calc($base-spacing) !important;
+    padding-bottom: calc($base-spacing) !important;
   }
   &-16 {
     padding-top: calc($base-spacing * 2) !important;
@@ -31,18 +39,15 @@ $base-spacing: 8px !default;
     padding-top: calc($base-spacing * 8) !important;
     padding-bottom: calc($base-spacing * 8) !important;
   }
-  &-top {
-    &-24 {
-      padding-top: calc($base-spacing * 3) !important;
-    }
-    &-32 {
-      padding-top: calc($base-spacing * 4) !important;
-    }
-    &-48 {
-      padding-top: calc($base-spacing * 6) !important;
-    }
-    &-64 {
-      padding-top: calc($base-spacing * 8) !important;
+  @each $side in $sides {
+    &-#{$side} {
+      padding-#{$side}: calc($base-spacing * 2) !important;
+      @for $i from 1 through 20 {
+        $val : $i * $base-spacing;
+        &-#{$val} {
+          padding-#{$side}: calc($i * $base-spacing) !important;
+        }
+      }
     }
   }
 } 
