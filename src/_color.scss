@@ -48,7 +48,16 @@ $colors: (
   "pale-yellow": #ffc,
   "pale-green": #dfd,
   "pale-blue": #dff,
-  "transparent": transparent
+  "transparent": transparent,
+  "indigo": #3fb1b5,
+  "asphalt": #343a40,
+  "crimson": #a20025,
+  "cobalt": #0050ef,
+  "emerald": #008a00,
+  "olive": #6d8764,
+  "paper": #f8f9fa,
+  "sienna": #a0522d,
+  "taupe": #87794e
   );
 
 @each $color, $hex in $colors {
@@ -114,4 +123,30 @@ $colors: (
       border-color: list.nth($color-palette, $i) !important;
     }
   }
+}
+
+/* Status */
+.#{$prefix}-danger {
+  color: #fff !important;
+  background-color: #dd0000 !important;
+}
+
+.#{$prefix}-note {
+  color: #000 !important;
+  background-color: #fff599 !important;
+}
+
+.#{$prefix}-info {
+  color: #fff !important;
+  background-color: #0a6fc2 !important;
+}
+
+.#{$prefix}-warning {
+  color: #000 !important;
+  background-color: #ffb305 !important;
+}
+
+.#{$prefix}-success {
+  color: #fff !important;
+  background-color: #008a00 !important;
 }
