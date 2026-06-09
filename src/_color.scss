@@ -128,7 +128,7 @@ $colors: (
 /* Status */
 .#{$prefix}-danger {
   color: #fff !important;
-  background-color: #dd0000 !important;
+  background-color: #d00 !important;
 }
 
 .#{$prefix}-note {
@@ -147,6 +147,6 @@ $colors: (
 }
 
 .#{$prefix}-success {
-  color: #fff !important;
   background-color: #008a00 !important;
+  color: #fff !important;
 }
