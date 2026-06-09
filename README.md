@@ -1,7 +1,7 @@
 # w3scss 
 #npm #node #sass #scss
 
-Rewrite of [W3.CSS] (https://www.w3schools.com/w3css/default.asp) in [SCSS](https://sass-lang.com/) with some minor changes and editions. 
+Rewrite of [W3.CSS](https://www.w3schools.com/w3css/default.asp) in [SCSS](https://sass-lang.com/) with some minor changes and editions. 
 
 I use this as a light and free framework for my other web projects.
 
