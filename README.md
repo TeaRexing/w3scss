@@ -35,7 +35,7 @@ I use this as a light and free framework for my other web projects.
 
 ---
 
-## Voraussetzungen
+## Prerequisities
 
 - [Node.js](https://nodejs.org/) with following packages installed (will be installed with ``npm install`` anyway)
 	- [autoprefixer](https://www.npmjs.com/package/autoprefixer) - add vendor prefixes
