@@ -61,6 +61,14 @@ $desktop: 1205px !default;
 }
 
 // Custom extensions
+.#{$prefix}-bold {
+  font-weight: bold;
+}
+
+.#{$prefix}-italic {
+  font-style: italic;
+}
+
 .#{$prefix}-bolder {
   font-weight: bolder;
 }

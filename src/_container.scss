@@ -133,3 +133,15 @@ $desktop: 1205px !default;
   margin-left: calc(-2 * $base-spacing);
   margin-right: calc(-2 * $base-spacing);
 }
+
+.#{$prefix}-grid {
+  display: grid;
+  &-padding {
+    gap: calc(2 * $base-spacing);
+  }
+}
+
+.#{$prefix}-flex {
+  display: flex;
+}
+
