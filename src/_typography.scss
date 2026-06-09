@@ -60,6 +60,18 @@ $desktop: 1205px !default;
   font-family: monospace;
 }
 
+.#{$prefix}-text-center {
+    text-align: center;
+}
+
+.#{$prefix}-rtl {
+  direction: rtl;
+}
+
+.#{$prefix}-ltr {
+  direction: ltr;
+}
+
 // Custom extensions
 .#{$prefix}-bold {
   font-weight: bold;
