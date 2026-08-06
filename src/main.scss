@@ -158,6 +158,12 @@ $desktop: 1205px;
   $border-color: #cccccc,
 );
 
+// Mixins
+@use 'mixins' with (
+  $prefix: $prefix,
+  $base-spacing: $base-spacing
+);
+
 // Misc
 @use 'misc' with (
   $prefix: $prefix,
