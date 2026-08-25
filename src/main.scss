@@ -57,6 +57,13 @@ $desktop: 1205px;
   $stripe-light: #ffffff,
 );
 
+@use 'flex' with (
+  $prefix: $prefix,
+  $base-spacing: $base-spacing,
+  $mobile: $mobile,
+  $tablet: $tablet,
+);
+
 // Cards
 @use 'card' with (
   $prefix: $prefix,

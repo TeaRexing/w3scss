@@ -140,8 +140,3 @@ $desktop: 1205px !default;
     gap: calc(2 * $base-spacing);
   }
 }
-
-.#{$prefix}-flex {
-  display: flex;
-}
-
