@@ -4,27 +4,58 @@ $prefix: "w3" !default;
 /* Layout */
 .#{$prefix}-cell {
   display: table-cell;
+
   &-row {
     display: table;
     width: 100%;
+
     &:before {
       content: "";
       display: table;
       clear: both;
     }
+
     &:after {
       content: "";
       display: table;
       clear: both;
     }
   }
+
   &-top {
     vertical-align: top;
   }
+
   &-middle {
     vertical-align: middle;
   }
+
   &-bottom {
     vertical-align: bottom;
+  }
+}
+
+/* fixed percent sizes */
+@for $i from 1 through 10 {
+  .#{prefix}-h-#{$i * 10} {
+    height: #{$i * 10}%;
+  }
+}
+
+@for $i from 1 through 10 {
+  .#{prefix}-mh-#{$i * 10} {
+    max-height: #{$i * 10}%;
+  }
+}
+
+@for $i from 1 through 10 {
+  .#{prefix}-w-#{$i * 10} {
+    width : #{$i * 10}%;
+  }
+}
+
+@for $i from 1 through 10 {
+  .#{prefix}-mw-#{$i * 10} {
+    max-width : #{$i * 10}%;
   }
 }
