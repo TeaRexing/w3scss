@@ -94,11 +94,6 @@ $colors: (
   // Background + Hover-Background
   .#{$prefix}-#{$i} {
     background-color: list.nth($color-palette,$i) !important;
-    @if color.same(list.nth($color-palette, $i), #000) {
-      color: #fff !important;
-    } @else {
-      color: #000 !important;
-    }
   }
   .#{$prefix}-hover-#{$i} {
     &:hover {
