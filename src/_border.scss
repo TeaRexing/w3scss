@@ -15,6 +15,11 @@ $sides: (top, left, right, bottom);
     }
   }
   @each $side in $sides {
+    &-#{$side}-medium{
+      border-#{$side}: 2px solid $border-color !important;
+    }
+  }
+  @each $side in $sides {
     &-#{$side}-large {
       border-#{$side}: 4px solid $border-color !important;
     }
