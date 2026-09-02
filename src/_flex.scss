@@ -159,6 +159,11 @@ $tablet: 992px !default;
 
 // Flex-Gaps 
 $gap-steps: 0, 1, 2, 3, 4, 6, 8;
+@each $step in $gap-steps {
+  .#{$prefix}-flex-gap-#{$step * $base-spacing} {
+    gap: $step * $base-spacing;
+  }
+}
 
 // larger than mobile
 @media (min-width: $mobile + 1) {
@@ -169,7 +174,6 @@ $gap-steps: 0, 1, 2, 3, 4, 6, 8;
           $gw: $step * $base-spacing;
           flex: 0 0 calc(col-width($i) - $gw);
           max-width: calc(col-width($i) - $gw);
-          gap: $base-spacing * $step;
         }
       }
     }
@@ -185,7 +189,6 @@ $gap-steps: 0, 1, 2, 3, 4, 6, 8;
           $gw: $step * $base-spacing;
           flex: 0 0 calc(col-width($i) - $gw);
           max-width: calc(col-width($i) - $gw);
-          gap: $base-spacing * $step;
         }
       }
     }

@@ -707,6 +707,34 @@ a {
   box-sizing: border-box;
 }
 
+.w3-flex-gap-0px {
+  gap: 0px;
+}
+
+.w3-flex-gap-8px {
+  gap: 8px;
+}
+
+.w3-flex-gap-16px {
+  gap: 16px;
+}
+
+.w3-flex-gap-24px {
+  gap: 24px;
+}
+
+.w3-flex-gap-32px {
+  gap: 32px;
+}
+
+.w3-flex-gap-48px {
+  gap: 48px;
+}
+
+.w3-flex-gap-64px {
+  gap: 64px;
+}
+
 @media (min-width: 601px) {
   .w3-flex-col-m1-g0 {
     flex: 0 0 calc(8.3333333333% - 0px);
