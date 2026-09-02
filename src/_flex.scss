@@ -161,7 +161,7 @@ $tablet: 992px !default;
 $gap-steps: 0, 1, 2, 3, 4, 6, 8;
 @each $step in $gap-steps {
   .#{$prefix}-flex-gap-#{$step * 8} {
-    gap: $step * $base-spacing;
+    gap: $step * $base-spacing !important;
   }
 }
 
