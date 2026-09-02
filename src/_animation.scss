@@ -119,6 +119,7 @@ $prefix: "w3" !default;
 }
 
 &-opacity {
+  opacity: 0;
   animation: opac 0.8s;
 
   &-js {
@@ -199,4 +200,8 @@ $prefix: "w3" !default;
   &-js {
     animation: none;
   }
+}
+
+.#{$preifix}-fade-hidden {
+  opacity: 0;
 }
