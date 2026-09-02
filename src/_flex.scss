@@ -16,13 +16,29 @@ $tablet: 992px !default;
 
 
 // Directions
-.#{$prefix}-flex-row          { flex-direction: row; }
-.#{$prefix}-flex-row-reverse  { flex-direction: row-reverse; }
-.#{$prefix}-flex-col          { flex-direction: column; }
-.#{$prefix}-flex-col-reverse  { flex-direction: column-reverse; }
+.#{$prefix}-flex-row {
+  flex-direction: row;
+}
 
-.#{$prefix}-flex-wrap    { flex-wrap: wrap; }
-.#{$prefix}-flex-nowrap  { flex-wrap: nowrap; }
+.#{$prefix}-flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.#{$prefix}-flex-col {
+  flex-direction: column;
+}
+
+.#{$prefix}-flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.#{$prefix}-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.#{$prefix}-flex-nowrap {
+  flex-wrap: nowrap;
+}
 
 // stack on mobile
 @media (max-width: $mobile) {
@@ -32,18 +48,46 @@ $tablet: 992px !default;
 }
 
 // Justify
-.#{$prefix}-flex-left     { justify-content: flex-start; }
-.#{$prefix}-flex-right    { justify-content: flex-end; }
-.#{$prefix}-flex-center   { justify-content: center; }
-.#{$prefix}-flex-between  { justify-content: space-between; }
-.#{$prefix}-flex-around   { justify-content: space-around; }
-.#{$prefix}-flex-evenly   { justify-content: space-evenly; }
+.#{$prefix}-flex-left {
+  justify-content: flex-start;
+}
+
+.#{$prefix}-flex-right {
+  justify-content: flex-end;
+}
+
+.#{$prefix}-flex-center {
+  justify-content: center;
+}
+
+.#{$prefix}-flex-between {
+  justify-content: space-between;
+}
+
+.#{$prefix}-flex-around {
+  justify-content: space-around;
+}
+
+.#{$prefix}-flex-evenly {
+  justify-content: space-evenly;
+}
 
 // Align
-.#{$prefix}-flex-top      { align-items: flex-start; }
-.#{$prefix}-flex-bottom   { align-items: flex-end; }
-.#{$prefix}-flex-middle   { align-items: center; }
-.#{$prefix}-flex-stretch  { align-items: stretch; }
+.#{$prefix}-flex-top {
+  align-items: flex-start;
+}
+
+.#{$prefix}-flex-bottom {
+  align-items: flex-end;
+}
+
+.#{$prefix}-flex-middle {
+  align-items: center;
+}
+
+.#{$prefix}-flex-stretch {
+  align-items: stretch;
+}
 
 // Centering
 .#{$prefix}-flex-center-all {
@@ -52,30 +96,46 @@ $tablet: 992px !default;
 }
 
 // Self-Align 
-.#{$prefix}-flex-self-top      { align-self: flex-start; }
-.#{$prefix}-flex-self-bottom   { align-self: flex-end; }
-.#{$prefix}-flex-self-middle   { align-self: center; }
-.#{$prefix}-flex-self-stretch  { align-self: stretch; }
+.#{$prefix}-flex-self-top {
+  align-self: flex-start;
+}
 
+.#{$prefix}-flex-self-bottom {
+  align-self: flex-end;
+}
+
+.#{$prefix}-flex-self-middle {
+  align-self: center;
+}
+
+.#{$prefix}-flex-self-stretch {
+  align-self: stretch;
+}
 
 // Sizes
-.#{$prefix}-flex-1        { flex: 1 1 0%; }
-.#{$prefix}-flex-auto     { flex: 1 1 auto; }
-.#{$prefix}-flex-none     { flex: none; } 
-.#{$prefix}-flex-grow-0   { flex-grow: 0; }
-.#{$prefix}-flex-shrink-0 { flex-shrink: 0; }
+.#{$prefix}-flex-1 {
+  flex: 1 1 0%;
+}
 
-// Flex-Gaps 
-$gap-steps: 0, 1, 2, 3, 4, 6, 8;
-@each $step in $gap-steps {
-  .#{$prefix}-flex-gap-#{$step * 8} {
-    gap: $base-spacing * $step;
-  }
+.#{$prefix}-flex-auto {
+  flex: 1 1 auto;
+}
+
+.#{$prefix}-flex-none {
+  flex: none;
+}
+
+.#{$prefix}-flex-grow-0 {
+  flex-grow: 0;
+}
+
+.#{$prefix}-flex-shrink-0 {
+  flex-shrink: 0;
 }
 
 // Flex-Grid
 @function col-width($n) {
-  @return math.div(95%, 12) * $n;
+  @return math.div(100%, 12) * $n;
 }
 
 // Row-Container 
@@ -97,12 +157,21 @@ $gap-steps: 0, 1, 2, 3, 4, 6, 8;
   }
 }
 
+// Flex-Gaps 
+$gap-steps: 0, 1, 2, 3, 4, 6, 8;
+
 // larger than mobile
 @media (min-width: $mobile + 1) {
   @for $i from 1 through 12 {
     .#{$prefix}-flex-col-m#{$i} {
-      flex: 0 0 col-width($i);
-      max-width: col-width($i) !important;
+      @each $step in $gap-steps {
+        &-g#{$step * 8} {
+          $gw: $step * $base-spacing;
+          flex: 0 0 calc(col-width($i) - $gw);
+          max-width: calc(col-width($i) - $gw);
+          gap: $base-spacing * $step;
+        }
+      }
     }
   }
 }
@@ -111,8 +180,14 @@ $gap-steps: 0, 1, 2, 3, 4, 6, 8;
 @media (min-width: $tablet + 1) {
   @for $i from 1 through 12 {
     .#{$prefix}-flex-col-l#{$i} {
-      flex: 0 0 col-width($i);
-      max-width: col-width($i) !important;
+      @each $step in $gap-steps {
+        &-g#{$step * 8} {
+          $gw: $step * $base-spacing;
+          flex: 0 0 calc(col-width($i) - $gw);
+          max-width: calc(col-width($i) - $gw);
+          gap: $base-spacing * $step;
+        }
+      }
     }
   }
 }
