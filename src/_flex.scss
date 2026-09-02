@@ -68,7 +68,7 @@ $tablet: 992px !default;
 // Flex-Gaps 
 $gap-steps: 0, 1, 2, 3, 4, 6, 8;
 @each $step in $gap-steps {
-  .#{$prefix}-flex-gap-#{$step * 8} {
+  .#{$prefix}-flex-gap-#{$step * $base-spacing} {
     gap: $base-spacing * $step;
   }
 }
@@ -102,7 +102,7 @@ $gap-steps: 0, 1, 2, 3, 4, 6, 8;
   @for $i from 1 through 12 {
     .#{$prefix}-flex-col-m#{$i} {
       flex: 0 0 col-width($i);
-      max-width: col-width($i);
+      max-width: col-width($i) !important;
     }
   }
 }
@@ -111,8 +111,8 @@ $gap-steps: 0, 1, 2, 3, 4, 6, 8;
 @media (min-width: $tablet + 1) {
   @for $i from 1 through 12 {
     .#{$prefix}-flex-col-l#{$i} {
-      flex: 0 0 col-width($i) -1 px;
-      max-width: col-width($i) -1 px;
+      flex: 0 0 col-width($i);
+      max-width: col-width($i) !important;
     }
   }
 }
