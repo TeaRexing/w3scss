@@ -125,6 +125,7 @@ $prefix: "w3" !default;
 
   &-js {
     animation: none;
+    animation-fill-mode: forwards;
   }
 }
 
