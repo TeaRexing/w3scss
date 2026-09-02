@@ -1,5 +1,7 @@
 /* Default variables */
 $prefix: "w3" !default;
+$base-spacing: 8px !default;
+$flex-width: 250px !default;
 
 // TODO: Cards as Mixins
 
@@ -15,3 +17,20 @@ $prefix: "w3" !default;
 .#{$prefix}-card-4 {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19)
 }
+
+/* Flex Cards */
+
+.#{$prefix}-flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $base-spacing;
+  align-items: stretch;
+}
+
+.#{$prefix}-flex-card {
+  flex: 1 1 $flex-width;
+  display: flex;
+  flex-direction: row;
+  padding: $base-spacing;
+}
+

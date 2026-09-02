@@ -67,6 +67,8 @@ $desktop: 1205px;
 // Cards
 @use 'card' with (
   $prefix: $prefix,
+  $base-spacing: $base-spacing;
+  $fles-width: 30 * $base-spacing;
 );
 
 // Responsive
