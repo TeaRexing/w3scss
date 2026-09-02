@@ -163,14 +163,14 @@ $prefix: "w3" !default;
     transform-origin: left; // Startpunkt der Animation
     transition: transform 0.3s ease-in-out;
   }
+
   &:hover::after {
     transform: scaleX(1);
   }
 }
-}
 
 &-underline-center {
-position: relative;
+  position: relative;
   text-decoration: none;
   display: inline-block;
 
@@ -190,6 +190,7 @@ position: relative;
   &:hover::after {
     transform: scaleX(1);
   }
+}
 }
 
 .#{$prefix}-spin {
