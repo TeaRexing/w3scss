@@ -75,7 +75,7 @@ $gap-steps: 0, 1, 2, 3, 4, 6, 8;
 
 // Flex-Grid
 @function col-width($n) {
-  @return math.div(100%, 12) * $n - 2px;
+  @return math.div(100%, 12) * $n - 1%;
 }
 
 // Row-Container 
