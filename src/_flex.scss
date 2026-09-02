@@ -111,8 +111,8 @@ $gap-steps: 0, 1, 2, 3, 4, 6, 8;
 @media (min-width: $tablet + 1) {
   @for $i from 1 through 12 {
     .#{$prefix}-flex-col-l#{$i} {
-      flex: 0 0 col-width($i);
-      max-width: col-width($i);
+      flex: 0 0 col-width($i) -1 px;
+      max-width: col-width($i) -1 px;
     }
   }
 }
