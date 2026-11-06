@@ -31,6 +31,10 @@ $prefix: "w3" !default;
   }
 }
 
+.#{$prefix}-caps {
+  text-transform: uppercase
+}
+
 // TypeWriter
 #typewriter {
   &::after {
