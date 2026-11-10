@@ -45,3 +45,19 @@ $prefix: "w3" !default;
 @keyframes blink {
   50% { opacity: 0; }
 }
+
+// Underline
+.#{$prefix}-underline {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+  }
+}
