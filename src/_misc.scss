@@ -2,7 +2,6 @@
 $prefix: "w3" !default;
 
 /* Misc */
-
 .#{$prefix}-disabled {
   cursor: not-allowed;
   opacity: 0.3;
@@ -33,21 +32,6 @@ $prefix: "w3" !default;
 
 .#{$prefix}-caps {
   text-transform: uppercase
-}
-
-// TypeWriter
-#typewriter {
-  &::after {
-  content: "|";
-  margin-left: 2px;
-  animation: blink 1s steps(1) infinite;
-  }
-  &.isDone::after {
-    content: "";
-  }
-}
-@keyframes blink {
-  50% { opacity: 0; }
 }
 
 // Underline

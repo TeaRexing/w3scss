@@ -203,3 +203,18 @@ $prefix: "w3" !default;
     animation: none;
   }
 }
+
+// TypeWriter
+#typewriter {
+  &::after {
+  content: "|";
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+  }
+  &.isDone::after {
+    content: "";
+  }
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
